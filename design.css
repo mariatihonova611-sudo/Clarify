@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: #111716;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #fbf9f5 0%, 
+        #f1f1f1 25%, 
+        #cfcfcf 50%, 
+        #6a717c 75%, 
+        #41415e 100%
+    );
+    background-attachment: fixed; 
+}
+
+.rotating-img {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover;
+    z-index: 1000;
+    animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #283746;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #546b82;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    color: #22364a;
+    font-size: 60px;
+    margin: 60px 0 10px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #40576d;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.buu {
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 2px solid #41415e;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #2d3748;
+}
+
+.buu ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+@media (max-width: 550px) {
+    .rotating-img {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 38px;
+    }
+    
+    h2 {
+        font-size: 15px;
+    }
+
+    .buu {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
